@@ -18,19 +18,16 @@ Route::get('/hello', function() {
 
 Route::get('/invoices', [InvoiceController::class, 'index']);
 Route::get('/invoices/{id}', [InvoiceController::class, 'show']); // request the id of the user
-// Route::post('/invoices', [InvoiceController::class, 'store']);
 Route::put('/invoices/{id}', [InvoiceController::class, 'update']);
 Route::delete('/invoices/{id}', [InvoiceController::class, 'destroy']); // soft delete
 
 Route::get('/policies', [PolicyController::class, 'index']);
 Route::get('/policies/{id}', [PolicyController::class, 'show']); // request the id of the user
-// Route::post('/policies', [PolicyController::class, 'store']);
 Route::put('/policies/{id}', [PolicyController::class, 'update']);
 Route::delete('/policies/{id}', [PolicyController::class, 'destroy']); // soft delete
 
 Route::get('/damages', [DamagesController::class, 'index']);
 Route::get('/damages/{id}', [DamagesController::class, 'show']); // request the id of the user
-// Route::post('/damages', [DamagesController::class, 'store']);
 Route::put('/damages/{id}', [DamagesController::class, 'update']);
 Route::delete('/damages/{id}', [DamagesController::class, 'destroy']); // soft delete
 
