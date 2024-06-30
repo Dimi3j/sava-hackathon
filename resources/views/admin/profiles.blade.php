@@ -12,7 +12,6 @@
                     <th class="py-3 px-6 text-left">Име</th>
                     <th class="py-3 px-6 text-left">Е-пошта</th>
                     <th class="py-3 px-6 text-left">Телефон</th>
-                    {{-- <th class="py-3 px-6 text-left">Дата на креирање</th> --}}
                 </tr>
             </thead>
             <tbody class="text-gray-600 text-sm font-light">
@@ -22,7 +21,13 @@
                         <td class="py-3 px-6 text-left">{{ $user->name }}</td>
                         <td class="py-3 px-6 text-left">{{ $user->email }}</td>
                         <td class="py-3 px-6 text-left">{{ $user->phone }}</td>
-                        {{-- <td class="py-3 px-6 text-left">{{ $user->created_at }}</td> --}}
+                        <td> <a href="{{ route('users.edit', $user->id) }}" class="text-blue-500 hover:underline">Edit</a>
+                            <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display:inline-block;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="text-red-500 hover:underline">Delete</button>
+                            </form>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

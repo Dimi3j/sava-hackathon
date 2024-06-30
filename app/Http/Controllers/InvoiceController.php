@@ -34,7 +34,6 @@ class InvoiceController extends Controller
             $validatedData = $request->validate([
                 'amount' => 'numeric',
                 'due_date' => 'date',
-                // Add other validation rules as necessary
             ]);
 
             $invoice->update($validatedData);

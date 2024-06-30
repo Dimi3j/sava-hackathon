@@ -10,6 +10,10 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
+
+    public function dashboard(){
+        return view('admin.admin');
+    }
     public function profiles()
     {
         $users = User::all();
