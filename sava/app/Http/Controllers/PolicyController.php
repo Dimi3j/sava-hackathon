@@ -10,9 +10,11 @@ class PolicyController extends Controller
 {
     public function index()
     {
-        $policies = Policy::all();
+        // $policies = Policy::all();
+        // return response()->json($policies);
 
-        return response()->json($policies);
+        $user = User::query()->with('policies')->inRandomOrder()->first();
+        return response()->json($user->policies);
     }
 
     public function show(Policy $id)

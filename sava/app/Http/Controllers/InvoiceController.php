@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Invoice;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
@@ -10,9 +11,9 @@ class InvoiceController extends Controller
 {
     public function index()
     {
-        $invoices = Invoice::all();
 
-        return response()->json($invoices);
+        $user = User::query()->with('invoices')->inRandomOrder()->first();
+        return response()->json($user->invoices);
     }
 
     public function show(Invoice $id)
