@@ -45,6 +45,10 @@
             <h2 class="text-2xl font-bold mb-4">Админ Панел</h2>
         </section>
 
+        <section class="p-5 w-2/3 flex justify-center relative ">
+            <h2 class="text-center absolute top-[30%] left-[20%] right-[35%] items-center font-bold">Оваа страна е админ панел каде што можете да ги видите сите информации околу профилите на корисниците, полисите, штетите, како и некои податоци околу фактурите.</h2>
+        </section>
+
 
         @section('content')
             <div class="p-6">
