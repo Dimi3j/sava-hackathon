@@ -13,8 +13,8 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        for ($i = 0; $i <= 10; $i++) {
-            User::create(['name' => fake()->sentence(rand(3, 6)), 'phone' => fake()->numberBetween(100000000, 999999999), 'email' => fake()->email(), 'password' => 12345678,]);
+        for ($i = 0; $i <= 5; $i++) {
+            User::create(['name' => fake()->name(), 'phone' => fake()->numberBetween(100000000, 999999999), 'email' => fake()->email(), 'password' => 12345678,]);
         }
     }
 }

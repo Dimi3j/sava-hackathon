@@ -13,10 +13,10 @@ class InvoiceSeeder extends Seeder
      */
     public function run(): void
     {
-        for ($i = 0; $i <= 10; $i++) {
+        for ($i = 0; $i <= 5; $i++) {
             Invoice::create([
-                'policy_id' => fake()->numberBetween(1, 10),
-                'user_id' => fake()->numberBetween(1,10),
+                'policy_id' => fake()->numberBetween(1, 5),
+                'user_id' => fake()->numberBetween(1, 5),
                 'amount' => fake()->randomFloat(2, 0, 9999.99),
                 'issue_date' => fake()->date(),]);
         }

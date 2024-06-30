@@ -53,6 +53,16 @@ class User extends Authenticatable implements JWTSubject
         return $this->hasMany(Policy::class);
     }
 
+    public function invoices()
+    {
+        return $this->hasMany(Invoice::class);
+    }
+
+    public function damages()
+    {
+        return $this->hasMany(Damage::class);
+    }
+
     /**
      * Get the identifier that will be stored in the subject claim of the JWT.
      *

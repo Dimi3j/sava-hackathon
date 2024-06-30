@@ -20,4 +20,9 @@ class Damage extends Model
     {
         return $this->belongsTo(Policy::class);
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
