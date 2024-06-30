@@ -16,8 +16,8 @@ class DamageSeeder extends Seeder
         for ($i = 0; $i <= 2; $i++) {
 
             Damage::create([
-                'policy_id' => fake()->numberBetween(1, 10),
-                'user_id' => fake()->numberBetween(1, 10),
+                'policy_id' => fake()->numberBetween(1, 5),
+                'user_id' => fake()->numberBetween(1, 5),
                 'status' => 'обработка',
                 'description' => fake()->text(),
                 'amount' => fake()->randomFloat(2, 0, 9999.99),
@@ -25,8 +25,8 @@ class DamageSeeder extends Seeder
             ]);
 
             Damage::create([
-                'policy_id' => fake()->numberBetween(1, 10),
-                'user_id' => fake()->numberBetween(1, 10),
+                'policy_id' => fake()->numberBetween(1, 5),
+                'user_id' => fake()->numberBetween(1, 5),
                 'status' => 'ликвидација',
                 'description' => fake()->text(),
                 'amount' => fake()->randomFloat(2, 0, 9999.99),
@@ -34,8 +34,8 @@ class DamageSeeder extends Seeder
             ]);
 
             Damage::create([
-                'policy_id' => fake()->numberBetween(1, 10),
-                'user_id' => fake()->numberBetween(1, 10),
+                'policy_id' => fake()->numberBetween(1, 5),
+                'user_id' => fake()->numberBetween(1, 5),
                 'status' => 'одбиена',
                 'description' => fake()->text(),
                 'amount' => fake()->randomFloat(2, 0, 9999.99),

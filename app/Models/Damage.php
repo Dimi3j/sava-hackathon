@@ -11,7 +11,6 @@ class Damage extends Model
 
     protected $fillable = [
         'policy_id',
-        'status',
         'description',
         'amount',
         'date_occurred',
@@ -22,7 +21,7 @@ class Damage extends Model
         return $this->belongsTo(Policy::class);
     }
 
-    public function users()
+    public function user()
     {
         return $this->belongsTo(User::class);
     }

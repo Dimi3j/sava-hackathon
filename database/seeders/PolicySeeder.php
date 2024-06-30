@@ -13,10 +13,10 @@ class PolicySeeder extends Seeder
      */
     public function run(): void
     {
-        for ($i = 0; $i <= 3; $i++) {Policy::create(['user_id' => fake()->numberBetween(1, 10),'policy_number' => 'PO-12345678','policy_type'=>'car','start_date' => fake()->date(),'end_date' => fake()->date(),]);
+        for ($i = 0; $i <= 3; $i++) {Policy::create(['user_id' => fake()->numberBetween(1, 5),'policy_number' => 'PO-12345678','policy_type'=>'car','start_date' => fake()->date(),'end_date' => fake()->date(),]);
 
             Policy::create([
-                'user_id' => fake()->numberBetween(1, 10),
+                'user_id' => fake()->numberBetween(1, 5),
                 'policy_number' => 'PO-12345678',
                 'policy_type'=>'home',
                 'start_date' => fake()->date(),
@@ -24,7 +24,7 @@ class PolicySeeder extends Seeder
             ]);
 
             Policy::create([
-                'user_id' => fake()->numberBetween(1, 10),
+                'user_id' => fake()->numberBetween(1, 5),
                 'policy_number' => 'PO-12345678',
                 'policy_type'=>'bicycle',
                 'start_date' => fake()->date(),

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Damage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
@@ -10,9 +11,11 @@ class DamagesController extends Controller
 {
     public function index()
     {
-        $damages = Damage::all();
+        // $damages = Damage::all();
+        // return response()->json($damages);
 
-        return response()->json($damages);
+        $user = User::query()->with('damages')->inRandomOrder()->first();
+        return response()->json($user->damages);
     }
 
     public function show(Damage $id)

@@ -20,7 +20,8 @@ class Invoice extends Model
         return $this->belongsTo(Policy::class);
     }
 
-    public function users(){
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 }

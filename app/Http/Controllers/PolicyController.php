@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Policy;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
@@ -10,9 +11,11 @@ class PolicyController extends Controller
 {
     public function index()
     {
-        $policies = Policy::all();
+        // $policies = Policy::all();
+        // return response()->json($policies);
 
-        return response()->json($policies);
+        $user = User::query()->with('policies')->inRandomOrder()->first();
+        return response()->json($user->policies);
     }
 
     public function show(Policy $id)

@@ -14,9 +14,6 @@ class Policy extends Model
     protected $fillable = [
         'user_id',
         'policy_number',
-        'policy_type',
-        'price',
-        'paid_with',
         'start_date',
         'end_date',
     ];

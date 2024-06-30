@@ -16,8 +16,6 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('policy_number');
             $table->enum('policy_type', ['bicycle', 'car', 'home']);
-            $table->string('price');
-            $table->string('paid_with');
             $table->date('start_date');
             $table->date('end_date');
             $table->timestamps();
