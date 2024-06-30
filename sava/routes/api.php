@@ -11,7 +11,7 @@ use App\Http\Controllers\Api\UserController;
 Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
 });
-// Route::middleware('auth:api')->group(function () {
+Route::middleware('auth:api')->group(function () {
 
     Route::get('/invoices', [InvoiceController::class, 'index']);
     Route::get('/invoices/{id}', [InvoiceController::class, 'show'])->middleware('auth:api');
@@ -27,7 +27,7 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     Route::get('/damages/{id}', [DamagesController::class, 'show']); // request the id of the user
     Route::put('/damages/{id}', [DamagesController::class, 'update']);
     Route::delete('/damages/{id}', [DamagesController::class, 'destroy']); // soft delete
-// });
+});
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
