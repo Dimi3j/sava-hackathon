@@ -23,9 +23,6 @@ return new class extends Migration
 
             $table->foreign('policy_id')->references('id')->on('policies');
             $table->foreign('user_id')->references('id')->on('users');
-
-            // obrabotka, likvidacija i isplatena
-            // user_id, status
         });
     }
 

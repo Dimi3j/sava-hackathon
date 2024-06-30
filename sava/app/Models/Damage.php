@@ -9,7 +9,6 @@ class Damage extends Model
 {
     use HasFactory;
 
-
     protected $fillable = [
         'policy_id',
         'description',

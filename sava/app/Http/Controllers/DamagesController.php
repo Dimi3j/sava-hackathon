@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Damage;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Request;
 
 class DamagesController extends Controller
 {
@@ -14,27 +15,17 @@ class DamagesController extends Controller
         return response()->json($damages);
     }
 
-    public function show($id)
+    public function show(Damage $id)
     {
-        $damage = Damage::find($id);
-        if ($damage) {
-            return response()->json($damage);
+        $user = Auth::user();
+
+        if ($id && $id->user_id === $user->id) {
+            return response()->json($id);
         } else {
-            return response()->json(['message' => 'Damage record not found'], 404);
+            return response()->json(['message' => 'Damage record not found or unauthorized'], 404);
         }
     }
 
-    public function store(Request $request)
-    {
-        $validatedData = $request->validate([
-            'description' => 'required|string',
-            'cost' => 'required|numeric',
-            // Add other validation rules as necessary
-        ]);
-
-        $damage = Damage::create($validatedData);
-        return response()->json($damage, 201);
-    }
 
     public function update(Request $request, $id)
     {

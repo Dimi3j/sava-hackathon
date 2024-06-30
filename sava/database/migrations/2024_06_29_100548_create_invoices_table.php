@@ -14,11 +14,13 @@ return new class extends Migration
         Schema::create('invoices', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('policy_id');
+            $table->unsignedBigInteger('user_id');
             $table->decimal('amount', 10, 2);
             $table->date('issue_date');
             $table->timestamps();
 
             $table->foreign('policy_id')->references('id')->on('policies');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

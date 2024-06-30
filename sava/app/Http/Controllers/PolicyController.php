@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Policy;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Request;
 
 class PolicyController extends Controller
 {
@@ -14,26 +15,15 @@ class PolicyController extends Controller
         return response()->json($policies);
     }
 
-    public function show($id)
+    public function show(Policy $id)
     {
-        $policies = Policy::find($id);
-        if ($policies) {
-            return response()->json($policies);
+        $user = Auth::user();
+
+        if ($id && $id->user_id === $user->id) {
+            return response()->json($id);
         } else {
-            return response()->json(['message' => 'Policy record not found'], 404);
+            return response()->json(['message' => 'Policy not found or unauthorized'], 404);
         }
-    }
-
-    public function store(Request $request)
-    {
-        $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'description' => 'required|string',
-            // Add other validation rules as necessary
-        ]);
-
-        $policy = Policy::create($validatedData);
-        return response()->json($policy, 201);
     }
 
     public function update(Request $request, $id)

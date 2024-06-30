@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Invoice;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Request;
 
 class InvoiceController extends Controller
 {
@@ -14,28 +15,17 @@ class InvoiceController extends Controller
         return response()->json($invoices);
     }
 
-    public function show($id)
+    public function show(Invoice $id)
     {
-        $invoices = Invoice::find($id);
-        if ($invoices) {
-            return response()->json($invoices);
+        $user = Auth::user();
+
+        if ($id && $id->user_id === $user->id) {
+            return response()->json($id);
         } else {
-            return response()->json(['message' => 'Invoice record not found'], 404);
+            return response()->json(['message' => 'Invoice record not found or unauthorized'], 404);
         }
     }
 
-    public function store(Request $request)
-    {
-        $validatedData = $request->validate([
-            'amount' => 'required|numeric',
-            'due_date' => 'required|date',
-            // Add other validation rules as necessary
-        ]);
-
-        $invoice = Invoice::create($validatedData);
-        return response()->json($invoice, 201);
-    }
-    
     public function update(Request $request, $id)
     {
         $invoice = Invoice::find($id);
