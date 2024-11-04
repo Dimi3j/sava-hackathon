@@ -1,0 +1,34 @@
+
+
+.link{
+    text-decoration: none;
+    color: black;
+  }
+.signin-bg{
+  height: 100%;
+  width: 100%;
+}
+.logo{
+  text-align: center;
+}
+.bg-landingPage{
+background-image: url(../public/img/landingbg.png);
+background-size:cover;
+background-position: center;
+height: 100vh;
+}
+
+.btn-container{
+  padding-right:250px ;
+  padding-top: 140px;
+}
+/* .form-control{
+  border-radius: 5px;
+  border: 2px solid black;
+} */
+
+.grad1 {
+  /* height: 200px; */
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, white , #3ef5a9);
+} 

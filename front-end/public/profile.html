@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/d0c2171ffe.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-100 tracking-widest">
+
+    <!-- Sidebar -->
+    <div class="flex min-h-screen">
+        <div class="bg-[#3CA082] text-white w-64 p-6 flex flex-col justify-between">
+            <div>
+                <div class="flex items-center justify-center mb-8 ">
+                    <img src="./images/download.png" class="w-full">
+                </div>
+                <nav>
+                    <a href="#" class="flex items-center py-2 px-4 hover:bg-[#007566] rounded-lg mb-2">
+                        <i class="fas fa-user"></i>
+                        <span class="ml-2">Профил</span>
+                    </a>
+                    <a href="#" class="flex items-center py-2 px-4 hover:bg-[#007566] rounded-lg mb-2">
+                        <i class="fas fa-file-alt"></i>
+                        <span class="ml-2">Полиси</span>
+                    </a>
+                    <a href="#" class="flex items-center py-2 px-4 hover:bg-[#007566] rounded-lg mb-2">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <span class="ml-2">Штети</span>
+                    </a>
+                    <a href="#" class="flex items-center py-2 px-4 hover:bg-[#007566] rounded-lg mb-2">
+                        <i class="fas fa-receipt"></i>
+                        <span class="ml-2">Фактури</span>
+                    </a>
+                    <a href="#" class="flex items-center py-2 px-4 hover:bg-[#007566] rounded-lg mb-2">
+                        <i class="fa-solid fa-phone"></i>
+                        <span class="ml-2">Контакт</span>
+                    </a>
+                    <a href="#" class="flex items-center py-2 px-4 hover:bg-[#007566] rounded-lg mb-2">
+                        <i class="fa-solid fa-gear"></i>
+                        <span class="ml-2">Поставки</span>
+                    </a>
+                </nav>
+            </div>
+            <div class="text-center py-2 px-4 w-full ">
+                <p class="text-sm rounded-full text-center bg-[#BBBBBB] -mt-2 absolute" style="padding:1.5px">Тука сме да ти помогнеме!</p>
+                <div class="text-left">
+                    <i class="fa-solid fa-comment text-5xl"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-8">
+            <!-- Header -->
+            <header class="flex items-center justify-between mb-8">
+                <div class="text-[#3CA082]">
+                    <i class="fa-solid fa-phone-volume text-2xl"></i>
+                    0800 80 000
+                </div>
+                <div class="flex items-center gap-3 ">
+                    <div class="rounded-full flex justify-between items-center bg-white py-2 px-4" >
+                        <input type="text" placeholder="Пребарувај" class="outline-none py-2 px-4">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <i class="fa-solid fa-bell text-[#3CA082] text-xl"></i>
+                    <i class="fa-solid fa-earth-americas text-[#3CA082] text-xl"></i>
+                </div>
+            </header>
+
+            <!-- Main Section -->
+            <section class="bg-white rounded-lg shadow-lg p-8 relative">
+                <div class="rounded-xl"  style="
+                border-top: 30px solid #3ca082;
+                border-bottom: 30px solid #3ca082;
+              ">
+                        <h1 class="text-2xl font-bold text-white absolute top-[3%] left-[45%]">Фактури</h1>
+                    <div class="mb-4 mt-2 flex justify-between items-center ">
+                        <div class="w-[60%] flex gap-3">
+                            <select class=" text-center border rounded-lg py-2 px-4 w-1/2 border-[#3ca082]">
+                                <option>-- Изберете полиси --</option>
+                                <option value="car">Полиса за возило</option>
+                                <option value="travel">Полиса за патување</option>
+                                <option value="bicycle">Полиса за велосипед</option>
+                                <!-- Options go here -->
+                            </select>
+    
+                            <select class=" text-center border rounded-lg py-2 px-4 w-1/2 border-[#3ca082]">
+                                <option>-- Активни полиси --</option>
+                                <option value="car">Полиса за возило</option>
+                                <option value="travel">Полиса за патување</option>
+                            </select>
+                        </div>
+                        <button class="bg-[#3CA082] text-white py-2 px-4 rounded-lg w-2/12"><i class="fa-solid fa-circle-plus text-lg"></i> Купи Полиса</button>
+                </div>
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr class="bg-[#3CA082] text-white">
+                            <th class="border-b border-[#3ca082] py-2 px-4 text-sm">Тип</th>
+                            <th class="border-b border-[#3ca082] py-2 px-4 text-sm">Број на полиса</th>
+                            <th class="border-b border-[#3ca082] py-2 px-4 text-sm">Пакет</th>
+                            <th class="border-b border-[#3ca082] py-2 px-4 text-sm">Бр.На лица</th>
+                            <th class="border-b border-[#3ca082] py-2 px-4 text-sm">Осигуреници</th>
+                            <th class="border-b border-[#3ca082] py-2 px-4 text-sm">Рок</th>
+                            <th class="border-b border-[#3ca082] py-2 px-4 text-sm">Цена</th>
+                            <th class="border-b border-[#3ca082] py-2 px-4 text-sm">Платено со</th>
+                            <th class="border-b border-[#3ca082] py-2 px-4 text-sm">Преземи</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Repeat this <tr> for each row -->
+                        <tr class="text-center">
+                            <td class="border-b border-[#3ca082] py-2 px-4"><i class="fa-solid fa-person-biking text-xl"></i></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">PO-12345678</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4"></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4"></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">Емилија</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">24/07-28/08</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">1200 ден.</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">Картичка</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">PDF</td>
+                        </tr>
+                        <!--  -->
+                        <tr class="text-center">
+                            <td class="border-b border-[#3ca082] py-2 px-4"><i class="fa-solid fa-person-biking text-xl"></i></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">PO-12345678</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4"></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4"></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">Емилија</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">24/07-28/08</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">1200 ден.</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">Картичка</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">PDF</td>
+                        </tr>
+                        <!--  -->
+                        <tr class="text-center">
+                            <td class="border-b border-[#3ca082] py-2 px-4"><i class="fa-solid fa-person-biking text-xl"></i></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">PO-12345678</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4"></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4"></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">Емилија</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">24/07-28/08</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">1200 ден.</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">Картичка</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">PDF</td>
+                        </tr>
+                        <!--  -->
+                        <tr class="text-center">
+                            <td class="border-b border-[#3ca082] py-2 px-4"><i class="fa-solid fa-person-biking text-xl"></i></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">PO-12345678</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4"></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4"></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">Емилија</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">24/07-28/08</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">1200 ден.</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">Картичка</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">PDF</td>
+                        </tr>
+                        <!--  -->
+                        <tr class="text-center">
+                            <td class="border-b border-[#3ca082] py-2 px-4"><i class="fa-solid fa-person-biking text-xl"></i></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">PO-12345678</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4"></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4"></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">Емилија</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">24/07-28/08</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">1200 ден.</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">Картичка</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">PDF</td>
+                        </tr>
+                        <!--  -->
+                        <tr class="text-center">
+                            <td class="border-b border-[#3ca082] py-2 px-4"><i class="fa-solid fa-person-biking text-xl"></i></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">PO-12345678</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4"></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4"></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">Емилија</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">24/07-28/08</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">1200 ден.</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">Картичка</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">PDF</td>
+                        </tr>
+                        <!--  -->
+                        <tr class="text-center">
+                            <td class="border-b border-[#3ca082] py-2 px-4"><i class="fa-solid fa-person-biking text-xl"></i></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">PO-12345678</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4"></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4"></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">Емилија</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">24/07-28/08</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">1200 ден.</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">Картичка</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">PDF</td>
+                        </tr>
+                        <!--  -->
+                        <tr class="text-center">
+                            <td class="border-b border-[#3ca082] py-2 px-4"><i class="fa-solid fa-person-biking text-xl"></i></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">PO-12345678</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4"></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4"></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">Емилија</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">24/07-28/08</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">1200 ден.</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">Картичка</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">PDF</td>
+                        </tr>
+                        <!--  -->
+                        <tr class="text-center">
+                            <td class="border-b border-[#3ca082] py-2 px-4"><i class="fa-solid fa-person-biking text-xl"></i></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">PO-12345678</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4"></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4"></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">Емилија</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">24/07-28/08</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">1200 ден.</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">Картичка</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">PDF</td>
+                        </tr>
+                        <!--  -->
+                        <tr class="text-center">
+                            <td class="border-b border-[#3ca082] py-2 px-4"><i class="fa-solid fa-person-biking text-xl"></i></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">PO-12345678</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4"></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4"></td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">Емилија</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">24/07-28/08</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">1200 ден.</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">Картичка</td>
+                            <td class="border-b border-[#3ca082] py-2 px-4">PDF</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mt-4 flex items-center justify-between">
+                    <span class="text-xl text-white absolute bottom-[10%] left-[35%]">Вкупен износ на долг: <span class=" font-bold">3600 ден.</span></span>
+                </div>
+            </div>
+            <div class="flex items-center justify-center mt-2">
+                <i class="fa-solid fa-angles-left text-2xl"></i>
+                <button class="mx-2 p-1 rounded-full">1</button>
+                <button class="mx-2 p-1 rounded-full">2</button>
+                <button class="mx-2 p-1 rounded-full">3</button>
+                <i class="fa-solid fa-angles-right text-2xl"></i>
+            </div>
+
+            </section>
+        </div>
+    </div>
+
+</body>
+</html>

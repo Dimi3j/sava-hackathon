@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/d0c2171ffe.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-gray-100 tracking-widest">
+    <!-- Sidebar -->
+    <div class="flex min-h-screen">
+      <div
+        class="bg-[#3CA082] text-white w-64 p-6 flex flex-col justify-between"
+      >
+        <div>
+          <div class="flex items-center justify-center mb-8">
+            <img src="./images/download.png" class="w-full" />
+          </div>
+          <nav>
+            <a
+              href="#"
+              class="flex items-center py-2 px-4 hover:bg-[#007566] rounded-lg mb-2"
+            >
+              <i class="fas fa-user"></i>
+              <span class="ml-2">Профил</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center py-2 px-4 hover:bg-[#007566] rounded-lg mb-2"
+            >
+              <i class="fas fa-file-alt"></i>
+              <span class="ml-2">Полиси</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center py-2 px-4 hover:bg-[#007566] rounded-lg mb-2"
+            >
+              <i class="fas fa-exclamation-triangle"></i>
+              <span class="ml-2">Штети</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center py-2 px-4 hover:bg-[#007566] rounded-lg mb-2"
+            >
+              <i class="fas fa-receipt"></i>
+              <span class="ml-2">Фактури</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center py-2 px-4 hover:bg-[#007566] rounded-lg mb-2"
+            >
+              <i class="fa-solid fa-phone"></i>
+              <span class="ml-2">Контакт</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center py-2 px-4 hover:bg-[#007566] rounded-lg mb-2"
+            >
+              <i class="fa-solid fa-gear"></i>
+              <span class="ml-2">Поставки</span>
+            </a>
+          </nav>
+        </div>
+        <div class="text-center py-2 px-4 w-full">
+          <p
+            class="text-sm rounded-full text-center bg-[#BBBBBB] absolute"
+          >
+            Тука сме да ти помогнеме!
+          </p>
+          <div class="text-left">
+            <i class="fa-solid fa-comment text-5xl"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="flex-1 p-8">
+        <!-- Header -->
+        <header class="flex items-center justify-between mb-8">
+          <div class="text-[#3CA082]">
+            <i class="fa-solid fa-phone-volume text-2xl"></i>
+            0800 80 000
+          </div>
+          <div class="flex items-center gap-3">
+            <div
+              class="rounded-full flex justify-between items-center bg-white py-2 px-4"
+            >
+              <input
+                type="text"
+                placeholder="Пребарувај"
+                class="outline-none py-2 px-4"
+              />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <i class="fa-solid fa-bell text-[#3CA082] text-xl"></i>
+            <i class="fa-solid fa-earth-americas text-[#3CA082] text-xl"></i>
+          </div>
+        </header>
+
+        <!-- Main Section -->
+        <section class="bg-white rounded-lg shadow-lg p-8 relative">
+          <div class="rounded-xl" style="border-top: 30px solid #3ca082">
+            <h1
+              class="text-2xl font-bold text-white absolute top-[4%] left-[45%]"
+            >
+              Штети
+            </h1>
+            <div class="mb-4 mt-2 flex justify-between items-center">
+              <select
+                class="border rounded-lg py-2 px-4 w-1/3 border-[#3ca082]"
+              >
+                <option class="text-center">Сите</option>
+                <option class="text-center" value="car">Полиса за возило</option>
+                <option class="text-center" value="travel">Полиса за патување</option>
+                <option class="text-center" value="bicycle">Полиса за велосипед</option>
+              </select>
+              <button
+                class="bg-[#3CA082] text-white py-2 px-4 rounded-lg w-2/12"
+              >
+                <i class="fa-solid fa-circle-plus text-lg"></i> Пријави штета
+              </button>
+            </div>
+
+            <div class="mt-12 flex gap-3">
+              <div class="w-3/12">
+                <h1 class="text-2xl font-bold text-[#3CA082]">
+                  Пријавени штети
+                </h1>
+                <div class="mt-3 flex flex-col gap-3">
+                  <button class="bg-[#3CA082] text-white rounded-xl py-3 px-4">
+                    PO-12345678
+                    <i class="fa-solid fa-caret-right text-white text-xl"></i>
+                  </button>
+                  <button class="bg-[#C3DCD7] text-black rounded-xl py-3 px-4">
+                    PO-12345678
+                    <i class="fa-solid fa-caret-right text-black text-xl"></i>
+                  </button>
+                  <button class="bg-[#C3DCD7] text-black rounded-xl py-3 px-4">
+                    PO-12345678
+                    <i class="fa-solid fa-caret-right text-black text-xl"></i>
+                  </button>
+                  <button class="bg-[#C3DCD7] text-black rounded-xl py-3 px-4">
+                    PO-12345678
+                    <i class="fa-solid fa-caret-right text-black text-xl"></i>
+                  </button>
+                  <button class="bg-[#C3DCD7] text-black rounded-xl py-3 px-4">
+                    PO-12345678
+                    <i class="fa-solid fa-caret-right text-black text-xl"></i>
+                  </button>
+                  <button class="bg-[#C3DCD7] text-black rounded-xl py-3 px-4">
+                    PO-12345678
+                    <i class="fa-solid fa-caret-right text-black text-xl"></i>
+                  </button>
+                  <button class="bg-[#C3DCD7] text-black rounded-xl py-3 px-4">
+                    PO-12345678
+                    <i class="fa-solid fa-caret-right text-black text-xl"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="w-8/12 rounded-2xl border border-[#3CA082]">
+                <div
+                  class="bg-gradient-to-r from-[#3CA082] text-white p-3 rounded-t-2xl"
+                >
+                  <span class="text-xl border-b border-white p-2"
+                    >PO-12345678</span
+                  >
+                </div>
+
+                <div class="flex justify-center items-center mt-[20%]">
+                  <div class="flex flex-col justify-center items-center">
+                    <span
+                      class="bg-[#3CA082] rounded-full h-20 w-20 flex items-center justify-center"
+                    >
+                      <i class="fa-solid fa-check text-white text-xl"></i>
+                    </span>
+                    <span class="text-[#3CA082] mt-2">Побарано</span>
+                  </div>
+                  <div class="w-36 bg-[#3CA082] h-1"></div>
+                  <div class="flex flex-col justify-center items-center">
+                    <span
+                      class="bg-[#3CA082] rounded-full h-20 w-20 flex items-center justify-center"
+                    >
+                      <i class="fa-solid fa-check text-white text-xl"></i>
+                    </span>
+                    <span class="text-[#3CA082] mt-2">Одобрено</span>
+                  </div>
+                  <div class="w-36 bg-gradient-to-r from-[#3CA082] h-1"></div>
+                  <div class="flex flex-col justify-center items-center">
+                    <span
+                      class="bg-white border border-[#3CA082] rounded-full h-20 w-20 flex items-center justify-center"
+                    >
+                      <span class="bg-[#3CA082] rounded-full h-6 w-6"></span>
+                    </span>
+                    <span class="text-[#3CA082] mt-2">Исплатено</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
